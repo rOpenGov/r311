@@ -110,7 +110,8 @@ open311_error <- function(resp, type) {
   error <- unbox(jsonlite::fromJSON(content, simplifyVector = FALSE))
   abort(
     sprintf("Error code %s: %s", error$code, error$description),
-    class = resp$status
+    class = resp$status,
+    call = NULL
   )
 }
 
@@ -135,10 +136,11 @@ guess_error <- function(resp) { # nocov start
           error$faultstring %||%
           "Unknown error"
       ),
-      class = status
+      class = status,
+      call = NULL
     )
   } else {
-    abort(sprintf("Error code %s", status), class = status)
+    abort(sprintf("Error code %s", status), class = status, call = NULL)
   }
 } # nocov end
 

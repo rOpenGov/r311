@@ -8,8 +8,8 @@
 }
 
 
-abort <- function(msg, class = NULL, call = NULL, ...) {
-  error <- list(message = msg, call = call %||% sys.call(-1))
+abort <- function(msg, class = NULL, call = sys.call(-1), ...) {
+  error <- list(message = msg, call = call)
   class(error) <- c(paste0("o311_", class %||% "error"), "error", "condition")
   stop(error)
 }
