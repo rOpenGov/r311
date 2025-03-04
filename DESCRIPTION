@@ -14,9 +14,7 @@ Description: Access and handle APIs that use the international 'open311'
     still allowing the integration in common R formats ('xml2', 'tibble',
     'sf').
 License: MIT + file LICENSE
-URL: https://github.com/jslth/r311, https://jslth.github.io/r311/,
-    https://github.com/JsLth/r311, https://ropengov.github.io/r311/,
-    https://github.com/rOpenGov/r311
+URL: https://ropengov.github.io/r311/, https://github.com/rOpenGov/r311
 BugReports: https://github.com/rOpenGov/r311/issues
 Depends:
     R (>= 4.0.0)
