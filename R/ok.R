@@ -44,7 +44,7 @@ o311_ok <- function(error = FALSE) {
       ok <- length(res) > 1 && "service_request_id" %in% names(res)
 
       if (!ok) {
-        abort(
+        r311_abort(
           "Request query did not return a valid requests.json response.",
           class = "ok_error"
         )

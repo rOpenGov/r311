@@ -144,7 +144,7 @@ o311_endpoints <- function(...) {
   dots <- list(...)
 
   if (!all(names(dots) %in% names(endpoints))) {
-    abort(
+    r311_abort(
       "Keys in `...` must correspond to an endpoints column.",
       class = "endpoints_filter_error"
     )

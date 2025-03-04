@@ -135,11 +135,9 @@ get_juris <- function() {
 
 
 setup_error <- function() {
-  abort(
-    paste(
-      "Could not find root API.",
-      "Please set an active API using `o311_api()`"
-    ),
+  r311_abort(
+    "Could not find root API.",
+    "Please set an active API using `o311_api()`",
     call = NULL,
     class = "setup_error"
   )
@@ -171,10 +169,10 @@ check_jurisdiction <- function(endpoints) {
     endpoints_dup <- length(unique(endpoints$name)) == 1
     juris_dup <- length(unique(endpoints$jurisdiction)) == 1
 
-    abort(
+    r311_abort(
+      "Multiple APIs matched.",
       paste(
-        "Multiple APIs matched.\n",
-        "Consider changing the input arguments or fixing the endpoints list",
+        "Consider changing the input arguments or fix the endpoints list",
         "using `o311_reset_endpoints()`."
       ),
       class = "endpoints_corrupt_error"
@@ -182,12 +180,9 @@ check_jurisdiction <- function(endpoints) {
   }
 
   if (!nrow(endpoints)) {
-    abort(
-      paste(
-        "No jurisdiction could be found given the specified",
-        "city / jurisdiction ID.\nRun `o311_endpoints()`",
-        "to get an overview of available jurisdictions."
-      ),
+    r311_abort(
+      "No jurisdiction could be found given the specified city / jurisdiction ID.",
+      "Run `o311_endpoints()` to get an overview of available jurisdictions.",
       class = "not_found_error"
     )
   }
@@ -196,15 +191,13 @@ check_jurisdiction <- function(endpoints) {
 
 check_format <- function(endpoints, format) {
   if (!endpoints$json && identical(format, "json")) {
-    abort(
-      paste(
-        "JSON responses are not supported by the given API.",
-        "Change the `format` argument to \"xml\"."
-      ),
+    r311_abort(
+      "JSON responses are not supported by the given API.",
+      "Change the `format` argument to \"xml\".",
       class = "json_unsupported_error"
     )
   } else if (!loadable("xml2", "xmlconvert") && identical(format, "xml")) {
-    abort(
+    r311_abort(
       "The `xml2` and `xmlconvert` packages are needed to accept XML responses.",
       class = "package_error"
     )

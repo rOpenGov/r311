@@ -108,7 +108,7 @@ open311_error <- function(resp, type) {
   check_content_type(resp, type)
   content <- rawToChar(resp$content)
   error <- unbox(jsonlite::fromJSON(content, simplifyVector = FALSE))
-  abort(
+  r311_abort(
     sprintf("Error code %s: %s", error$code, error$description),
     class = resp$status,
     call = NULL
@@ -125,9 +125,9 @@ guess_error <- function(resp) { # nocov start
   if (grepl("application/json", content_type, fixed = TRUE)) {
     content <- rawToChar(resp$content)
     error <- unbox(jsonlite::fromJSON(content, simplifyVector = FALSE))
-    abort(
+    r311_abort(
       sprintf(
-        "Error code %s: %s",
+        "HTTP %s: %s",
         headers$status %||% status %||% "999",
         error$description %||%
           error$message %||%
@@ -140,7 +140,12 @@ guess_error <- function(resp) { # nocov start
       call = NULL
     )
   } else {
-    abort(sprintf("Error code %s", status), class = status, call = NULL)
+    r311_abort(
+      sprintf("Unknown error (HTTP %s)", status),
+      "This is usually an indicator that the open311 server is corrupt.",
+      class = status,
+      call = NULL
+    )
   }
 } # nocov end
 
@@ -149,8 +154,8 @@ check_content_type <- function(resp, type) {
   type <- switch(type, json = "application/json", xml = "text/xml")
 
   if (!grepl(type, resp$type, fixed = TRUE)) { # nocov start
-    abort(
-      sprintf("Unexpected content type %s", dQuote(resp$type)),
+    r311_abort(
+      sprintf("Unexpected content type %s", dQuote(resp$type, q = FALSE)),
       class = "type_error"
     )
   } # nocov end

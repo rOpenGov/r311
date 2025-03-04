@@ -160,7 +160,7 @@ o311_request_all <- function(service_code = NULL,
   assert_number(max_pages, null = FALSE, int = TRUE, inf = TRUE)
   assert_flag(progress)
   if ("page" %in% ...names()) {
-    abort(
+    r311_abort(
       paste(
         "`page` is unsupported in `o311_request_all`.",
         "The function iterates through all pages."

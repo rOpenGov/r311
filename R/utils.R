@@ -43,7 +43,7 @@ abort <- function(msg, class = NULL, call = sys.call(1), env = parent.frame()) {
   if (is.null(call)) {
     msg <- sprintf("Error:\n%s", msg)
   } else {
-    msg <- sprintf("Error in %s:\n%s", deparse(.call), msg)
+    msg <- sprintf("Error in %s:\n%s", deparse(call), msg)
   }
 
   cat(msg, "\n", file = stderr())
