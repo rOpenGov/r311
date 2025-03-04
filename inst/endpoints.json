@@ -8,7 +8,10 @@
     "pagination": true,
     "limit": 50,
     "json": true,
-    "dialect": "Mark-a-Spot"
+    "dialect": "Mark-a-Spot",
+    "deprecated": true,
+    "deprecated_reason": "switched",
+    "deprecated_url": "https://buergerbeteiligung.sachsen.de/"
   },
   {
     "name": "Bloomington, IN",
@@ -64,15 +67,14 @@
   },
   {
     "name": "Chicago, IL",
-    "root": "https://311api.cityofchicago.org/open311/v2/",
-    "docs": "https://311api.cityofchicago.org/open311/v2/",
+    "root": "311api.cityofchicago.org/open311/v2/",
+    "docs": "311api.cityofchicago.org/open311/v2/",
     "jurisdiction": "cityofchicago.org",
     "key": false,
     "pagination": true,
     "limit": 50,
     "json": true,
-    "dialect": "Connected Bits",
-    "questioning": true
+    "dialect": "Connected Bits"
   },
   {
     "name": "Newport News, VA",
@@ -114,7 +116,8 @@
     "pagination": true,
     "limit": 1000,
     "json": true,
-    "questioning": true
+    "deprecated": true,
+    "deprecated_reason": "abandoned"
   },
   {
     "name": "Rostock, DE",
@@ -164,7 +167,9 @@
     "limit": 50,
     "json": true,
     "dialect": "Mark-a-Spot",
-    "questioning": true
+    "deprecated": true,
+    "deprecated_reason": "switched",
+    "deprecated_url": "https://mitmachen.siegburg.de/deficiency_reports"
   },
   {
     "name": "Paderborn, DE",
@@ -189,8 +194,7 @@
     "root": "https://opaskartta.turku.fi/efeedback/api/georeport/6aika/",
     "key": false,
     "pagination": false,
-    "json": true,
-    "questioning": false
+    "json": true
   },
   {
     "name": "Espoo, FI",
@@ -198,8 +202,7 @@
     "jurisdiction": "espoo",
     "key": false,
     "pagination": false,
-    "json": true,
-    "questioning": true
+    "json": true
   },
   {
     "name": "Oulu, FI",
@@ -207,8 +210,7 @@
     "jurisdiction": "oulu",
     "key": false,
     "pagination": false,
-    "json": true,
-    "questioning": true
+    "json": true
   },
   {
     "name": "Zurich, CH",
@@ -499,7 +501,7 @@
     "limit": 20,
     "json": true,
     "dialect": "SeeClickFix",
-    "questioning": true
+    "deprecated": true
   },
   {
     "name": "Union City, GA",
