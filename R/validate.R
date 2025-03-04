@@ -48,6 +48,7 @@ validate_endpoints <- function(idx = NULL,
   methods <- match.arg(methods, several.ok = TRUE)
 
   endpoints <- o311_endpoints()
+  endpoints <- endpoints[!endpoints$deprecated, ]
   idx <- idx %||% seq_len(nrow(endpoints))
   ok <- lapply(idx, function(i) {
     waiter(current = which(i == idx), total = length(idx), unit = "endpoint")
