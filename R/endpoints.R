@@ -154,6 +154,14 @@ o311_endpoints <- function(...) {
     endpoints <- endpoints[endpoints[[col]] %in% dots[[col]], ]
   }
 
+  if ("deprecated" %in% names(endpoints)) {
+    endpoints[is.na(endpoints$deprecated), "deprecated"] <- FALSE
+  }
+
+  if ("questioning" %in% names(endpoints)) {
+    endpoints[is.na(endpoints$deprecated), "questioning"] <- FALSE
+  }
+
   endpoints
 }
 
