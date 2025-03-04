@@ -8,10 +8,49 @@
 }
 
 
-abort <- function(msg, class = NULL, call = sys.call(-1), ...) {
-  error <- list(message = msg, call = call)
-  class(error) <- c(paste0("o311_", class %||% "error"), "error", "condition")
-  stop(error)
+r311_abort <- function(msg,
+                       extra = NULL,
+                       ...,
+                       class = "error",
+                       call = sys.call(1),
+                       env = parent.frame()) {
+  msg <- paste("!", msg)
+
+  if (!is.null(extra)) {
+    msg <- paste0(msg, "\n", "\u2139", " ", extra)
+  }
+
+  if (...length()) {
+    dots <- c(...)
+    dots <- paste("\u2022", dots)
+    dots <- paste(dots, collapse = "\n")
+    msg <- paste(msg, dots, sep = "\n")
+  }
+
+  .class <- paste0("r311_", class)
+  abort(msg, class = class, call = call, env = env)
+}
+
+
+abort <- function(msg, class = NULL, call = sys.call(1), env = parent.frame()) {
+  if (identical(env, globalenv())) {
+    call <- NULL
+  }
+
+  cnd <- errorCondition(msg, call = call, class = class)
+  signalCondition(cnd)
+
+  if (is.null(call)) {
+    msg <- sprintf("Error:\n%s", msg)
+  } else {
+    msg <- sprintf("Error in %s:\n%s", deparse(.call), msg)
+  }
+
+  cat(msg, "\n", file = stderr())
+  old_opts <- options(show.error.messages = FALSE)
+  on.exit(options(old_opts))
+  msg <- NULL
+  stop(msg)
 }
 
 
