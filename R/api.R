@@ -86,7 +86,8 @@ o311_api <- function(endpoint = NULL,
     endpoints <- endpoints[grepl(
       endpoint,
       endpoints$name,
-      ignore.case = TRUE
+      ignore.case = TRUE,
+      fixed = TRUE
     ), ]
   }
 
