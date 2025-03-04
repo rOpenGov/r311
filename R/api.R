@@ -84,9 +84,8 @@ o311_api <- function(endpoint = NULL,
     endpoints <- endpoints[endpoints$jurisdiction %in% jurisdiction, ]
   } else if (!is.null(endpoint)) {
     endpoints <- endpoints[grepl(
-      endpoint,
-      endpoints$name,
-      ignore.case = TRUE,
+      tolower(endpoint),
+      tolower(endpoints$name),
       fixed = TRUE
     ), ]
   }
