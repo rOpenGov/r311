@@ -94,6 +94,13 @@ o311_api <- function(endpoint = NULL,
   check_format(endpoints, format)
   endpoints$json <- identical(format, "json")
 
+  if (isTRUE(endpoints[["deprecated"]])) {
+    api_deprecated(
+      endpoints[["deprecated_reason"]],
+      endpoints[["deprecated_url"]]
+    )
+  }
+
   if (isTRUE(endpoints[["questioning"]])) {
     warning(paste( # nocov start
       "This API was marked as \"questioning\". This means that it did not",
@@ -133,9 +140,29 @@ setup_error <- function() {
       "Could not find root API.",
       "Please set an active API using `o311_api()`"
     ),
-    call. = FALSE,
+    call = NULL,
     class = "setup_error"
   )
+}
+
+
+api_deprecated <- function(reason = NULL, fallback = NULL) {
+  msg <- "The selected API is marked as deprecated."
+
+  reason <- switch(
+    reason %||% "unknown",
+    switched = "The associated city seems to have switched to a different API.",
+    abandoned = "The associated city seems to have abandoned public service request management."
+  )
+
+  if (!is.null(fallback)) {
+    fallback <- sprintf(
+      "You may be able to retrieve civic service data by visiting %s.",
+      fallback
+    )
+  }
+
+  r311_abort(msg, reason, fallback, call = NULL, class = "deprecated")
 }
 
 
@@ -187,9 +214,10 @@ check_format <- function(endpoints, format) {
 
 #' @export
 print.r311_api <- function(x, ...) {
+  x <- Filter(Negate(is.null), x)
   fmt <- vapply(names(x), FUN.VALUE = character(1), function(i) {
     nws <- strrep(" ", 12 - nchar(i))
-    paste0(" ", i, nws, " : ", x[[i]] %||% "None")
+    paste0(" ", i, nws, " : ", x[[i]])
   })
   fmt <- paste0("<r311_api>\n", paste(fmt, collapse = "\n"))
   cat(fmt, "\n")
