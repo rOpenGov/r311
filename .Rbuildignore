@@ -11,3 +11,4 @@
 ^useful$
 ^CRAN-SUBMISSION$
 ^\._pkgdown\.yml$
+^codemeta\.json$
