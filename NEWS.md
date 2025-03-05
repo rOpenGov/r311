@@ -3,7 +3,7 @@
 * API list upkeep
   * Added: Espoo, Oulu
   * Changed: Turku
-  * Deprecated: Chicago, Ottawa, Siegburg, Northfield, Annaberg-Buchholz
+  * Deprecated: Ottawa, Siegburg, Northfield, Annaberg-Buchholz
 * Introduced deprecation system of available APIs
   * Added a key "questioned" to the API list which signals that an API might be abandoned
   * Added a key "deprecated" to the API list which signals that an API is no longer functional
@@ -14,6 +14,7 @@
 * Fix bug where formal checks in `validate_endpoints()` create an invalid dataframe
 * Ensure that API error handling always yields a valid condition object
 * `o311_api` does not match regular expressions anymore
+* `o311_ok(error = TRUE)` now returns an error instead of an error object
 * Add an explanatory note if an HTTP error is unknown
 * Added a CITATION file (#3)
 * Added a codemeta file
