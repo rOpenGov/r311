@@ -17,8 +17,8 @@
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Roboto-0.4.9/font.css" rel="stylesheet">
 <link href="../deps/JetBrains_Mono-0.4.9/font.css" rel="stylesheet">
 <link href="../deps/Roboto_Slab-0.4.9/font.css" rel="stylesheet">
-<link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
-<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><link href="../deps/KaTex-0.16.10/katex.min.css" rel="stylesheet">
 <script src="../deps/KaTex-0.16.10/katex.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="r311: An R interface to the open311 standard">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">r311</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,7 +122,7 @@ implementations that are defined for use in the package. The list can be
 read using <code>o311_endpoints</code>.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/o311_endpoints.html">o311_endpoints</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 69 × 10</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 69 × 12</span></span></span>
 <span><span class="co">#&gt;    name            root  docs  jurisdiction key   pagination limit json  dialect</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Annaberg-Buchh… http… http… annberg-buc… FALSE TRUE          50 TRUE  Mark-a…</span></span>
@@ -131,15 +131,16 @@ read using <code>o311_endpoints</code>.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Boston, MA      http… http… <span style="color: #BB0000;">NA</span>           FALSE TRUE          50 TRUE  Connec…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Brookline, MA   http… http… brooklinema… FALSE TRUE          50 TRUE  Connec…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Austin, TX      http… http… <span style="color: #BB0000;">NA</span>           FALSE TRUE          50 TRUE  Connec…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Chicago, IL     http… http… cityofchica… FALSE TRUE          50 TRUE  Connec…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Chicago, IL     311a… 311a… cityofchica… FALSE TRUE          50 TRUE  Connec…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Newport News, … http… http… cityofnewpo… FALSE TRUE          50 TRUE  Connec…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> San Diego, CA   http… http… sandiego.gov FALSE TRUE          50 TRUE  Connec…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Köln / Cologne… http… <span style="color: #BB0000;">NA</span>    stadt-koeln… FALSE TRUE          50 TRUE  Mark-a…</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 59 more rows</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1 more variable: questioning &lt;lgl&gt;</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 3 more variables: deprecated &lt;lgl&gt;, deprecated_reason &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   deprecated_url &lt;chr&gt;</span></span></span></code></pre></div>
 <p>The list does neither claim comprehensiveness nor up-to-dateness. It
 arguably provides some of the most important and easily accessible
-endpoints as of 2024. However, <code>r311</code> also offers the ability
+endpoints as of 2025. However, <code>r311</code> also offers the ability
 to add new endpoints to <code>o311_endpoints</code> using
 <code>o311_add_endpoint</code>. You need to provide a name (for lookup)
 and a root URL (the URL used to send requests). The following code adds
@@ -207,17 +208,17 @@ administrative services.</p>
 <span><span class="co">#&gt; Simple feature collection with 7 features and 15 fields</span></span>
 <span><span class="co">#&gt; Geometry type: POINT</span></span>
 <span><span class="co">#&gt; Dimension:     XY</span></span>
-<span><span class="co">#&gt; Bounding box:  xmin: 12.04427 ymin: 54.06731 xmax: 12.23699 ymax: 54.2091</span></span>
+<span><span class="co">#&gt; Bounding box:  xmin: 12.07615 ymin: 54.06731 xmax: 12.23699 ymax: 54.2091</span></span>
 <span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 7 × 16</span></span></span>
 <span><span class="co">#&gt;   service_request_id status_notes status   service_code service_name description</span></span>
 <span><span class="co">#&gt;                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>                  7 <span style="color: #949494;">"</span>xauzzaa<span style="color: #949494;">"</span>    in_proc…            1 Ampel schad… xffxfddfh  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>                  3 <span style="color: #949494;">""</span>           in_proc…           16 Grünschnitt… Dieser Wei…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>                  2 <span style="color: #949494;">""</span>           in_proc…           60 Sitzgelegen… Dieser Sit…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span>                  5 <span style="color: #949494;">""</span>           closed             62 Ampel schad… Die Ampel …</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span>                  6 <span style="color: #949494;">""</span>           reviewed          110 Spielplatz … Hier sollt…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span>                  4 <span style="color: #949494;">""</span>           closed            129 Papierkorb/… Dieser Abf…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>                  3 <span style="color: #949494;">""</span>           in_proc…           16 Grünschnitt… Dieser Wei…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>                  2 <span style="color: #949494;">""</span>           in_proc…           60 Sitzgelegen… Dieser Sit…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span>                  5 <span style="color: #949494;">""</span>           closed             62 Ampel schad… Die Ampel …</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span>                  6 <span style="color: #949494;">""</span>           reviewed          110 Spielplatz … Hier sollt…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span>                  4 <span style="color: #949494;">""</span>           closed            129 Papierkorb/… Dieser Abf…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span>                  7 <span style="color: #BB0000;">NA</span>           received          160 Altfahrzeug… redaktione…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">7</span>                  1 <span style="color: #949494;">""</span>           in_proc…          160 Altfahrzeug… Das Schrot…</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 10 more variables: agency_responsible &lt;chr&gt;, service_notice &lt;lgl&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   requested_datetime &lt;chr&gt;, updated_datetime &lt;chr&gt;, expected_datetime &lt;lgl&gt;,</span></span></span>
@@ -275,25 +276,25 @@ first two pages, resulting in a tibble with 100 service requests.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/o311_api.html">o311_api</a></span><span class="op">(</span><span class="st">"Rostock, DE"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/o311_requests.html">o311_request_all</a></span><span class="op">(</span>max_pages <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Simple feature collection with 4865 features and 15 fields</span></span>
+<span><span class="co">#&gt; Simple feature collection with 3113 features and 15 fields</span></span>
 <span><span class="co">#&gt; Geometry type: POINT</span></span>
 <span><span class="co">#&gt; Dimension:     XY</span></span>
-<span><span class="co">#&gt; Bounding box:  xmin: 12.01733 ymin: 54.05571 xmax: 12.22792 ymax: 54.24393</span></span>
+<span><span class="co">#&gt; Bounding box:  xmin: 12.01733 ymin: 54.05324 xmax: 12.24575 ymax: 54.19303</span></span>
 <span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 4,865 × 16</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 3,113 × 16</span></span></span>
 <span><span class="co">#&gt;    service_request_id status_notes  status service_code service_name description</span></span>
 <span><span class="co">#&gt;                 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>              <span style="text-decoration: underline;">24</span>824 <span style="color: #949494;">""</span>            in_pr…          113 Beschilderu… Kreuzung A…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>              <span style="text-decoration: underline;">95</span>322 <span style="color: #949494;">"</span>Danke für I… in_pr…            2 bauliche Ge… Gefährlich…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>              <span style="text-decoration: underline;">70</span>677  <span style="color: #BB0000;">NA</span>           recei…            2 bauliche Ge… redaktione…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>              <span style="text-decoration: underline;">72</span>069  <span style="color: #BB0000;">NA</span>           recei…           22 Sperrmüll    redaktione…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>              <span style="text-decoration: underline;">72</span>070  <span style="color: #BB0000;">NA</span>           recei…           15 Elektroschr… redaktione…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>             <span style="text-decoration: underline;">102</span>044 <span style="color: #949494;">""</span>            in_pr…           15 Elektroschr… 1 TK       </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>              <span style="text-decoration: underline;">70</span>076  <span style="color: #BB0000;">NA</span>           closed          160 Altfahrzeug… <span style="color: #BB0000;">NA</span>         </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>              <span style="text-decoration: underline;">75</span>356  <span style="color: #BB0000;">NA</span>           recei…           17 Hausmüll     redaktione…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>              <span style="text-decoration: underline;">44</span>333  <span style="color: #BB0000;">NA</span>           recei…            2 bauliche Ge… redaktione…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>              <span style="text-decoration: underline;">44</span>457  <span style="color: #BB0000;">NA</span>           recei…            2 bauliche Ge… Seit mittl…</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 4,855 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>             <span style="text-decoration: underline;">105</span>483 <span style="color: #949494;">"</span>Ihre Meldun… closed           22 Sperrmüll    Sperrmüll …</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>              <span style="text-decoration: underline;">70</span>076  <span style="color: #BB0000;">NA</span>           closed          160 Altfahrzeug… <span style="color: #BB0000;">NA</span>         </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>             <span style="text-decoration: underline;">104</span>921 <span style="color: #949494;">"</span>Die Meldung… closed           22 Sperrmüll    Sperrmüll …</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>              <span style="text-decoration: underline;">44</span>333  <span style="color: #BB0000;">NA</span>           recei…            2 bauliche Ge… redaktione…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>              <span style="text-decoration: underline;">44</span>457  <span style="color: #BB0000;">NA</span>           recei…            2 bauliche Ge… Seit mittl…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>              <span style="text-decoration: underline;">44</span>472  <span style="color: #BB0000;">NA</span>           recei…            4 Beschilderu… redaktione…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>              <span style="text-decoration: underline;">75</span>759  <span style="color: #BB0000;">NA</span>           recei…          112 Beschilderu… redaktione…</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 3,103 more rows</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 10 more variables: agency_responsible &lt;chr&gt;, service_notice &lt;lgl&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   requested_datetime &lt;chr&gt;, updated_datetime &lt;chr&gt;, expected_datetime &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   address &lt;chr&gt;, adress_id &lt;lgl&gt;, media_url &lt;chr&gt;, zipcode &lt;lgl&gt;,</span></span></span>
@@ -321,7 +322,7 @@ a count value.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 1</span></span></span>
 <span><span class="co">#&gt;   value</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>  <span style="text-decoration: underline;">4</span>865</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span>  <span style="text-decoration: underline;">3</span>113</span></span></code></pre></div>
 <p>The CitySDK extensions also offers additional URL paths which can be
 queried using the generic <code>o311_query</code> function.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
