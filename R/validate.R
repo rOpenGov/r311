@@ -48,12 +48,20 @@ validate_endpoints <- function(idx = NULL,
   methods <- match.arg(methods, several.ok = TRUE)
 
   endpoints <- o311_endpoints()
-  endpoints <- endpoints[!endpoints$deprecated, ]
   idx <- idx %||% seq_len(nrow(endpoints))
   ok <- lapply(idx, function(i) {
     waiter(current = which(i == idx), total = length(idx), unit = "endpoint")
     name <- endpoints$name[i] %NA% NULL
     juris <- endpoints$jurisdiction[i] %NA% NULL
+    deprecated <- endpoints[["deprecated"]]
+
+    if (isTRUE(deprecated[i])) {
+      out <- data.frame(name = name)
+      ok <- reasons <- as.data.frame(rep(list("Deprecated"), length(checks)))
+      ok_reasons <- cbind(ok, reasons)
+      names(ok_reasons) <- c(checks, paste0("reason_", checks))
+      return(cbind(out, ok_reasons))
+    }
 
     formal <- try(o311_api(endpoint = name, jurisdiction = juris), silent = TRUE)
     if (inherits(formal, "try-error")) {

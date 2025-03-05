@@ -35,9 +35,13 @@ test_that("validation works", {
   on.exit(o311_reset_endpoints())
   add_test_endpoint("sf invalid", juris = "test")
   ep <- o311_endpoints()
-  vldt <- validate_endpoints(c(1, nrow(ep)))
-  expect_identical(vldt$reason_requests, c(NA, "API not reachable"))
-  expect_identical(vldt$requests, c(TRUE, FALSE))
+  intact_idx <- which(ep$name %in% ep[!ep$deprecated, ]$name[1])
+  depr_idx <- which(ep$name %in% ep[ep$deprecated, ]$name[1])
+  vldt <- validate_endpoints(c(intact_idx, depr_idx, nrow(ep)))
+  expect_identical(vldt$reason_requests[3], "API not reachable")
+  expect_identical(vldt$reason_requests[2], "Deprecated")
+  expect_false(vldt$requests[2])
+  expect_false(vldt$requests[3])
 })
 
 test_that("formal validation works", {
