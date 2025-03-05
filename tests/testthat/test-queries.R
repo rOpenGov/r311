@@ -86,7 +86,7 @@ test_that("o311_ok detects wrong roots", {
 
   o311_add_endpoint("invalid", root = "http://echo.jsontest.com/key/value/one/two")
   o311_api("invalid")
-  expect_s3_class(o311_ok(error = TRUE), class = "o311_ok_error")
+  expect_error(o311_ok(error = TRUE), class = "o311_ok_error")
 
   add_test_endpoint()
   o311_api("sd test")

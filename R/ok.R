@@ -53,7 +53,11 @@ o311_ok <- function(error = FALSE) {
       ok
     },
     error = function(e) {
-      if (error) e else FALSE
+      if (error) {
+        r311_abort(e$message, class = "ok_error")
+      } else {
+        FALSE
+      }
     }
   )
 }
