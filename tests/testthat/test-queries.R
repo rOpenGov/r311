@@ -77,16 +77,19 @@ test_that("o311_ok detects wrong roots", {
   o311_add_endpoint("unavailable", root = "google.com/open311/v2")
   o311_api("unavailable")
   expect_false(o311_ok())
-  expect_s3_class(o311_ok(error = TRUE), class = "o311_404")
+  expect_error(o311_ok(error = TRUE), class = "o311_404")
 
   o311_add_endpoint("empty", root = "https://seeclickfix.com/open311/v2/20/")
   o311_api("empty")
   expect_s3_class(o311_ok(error = TRUE), class = "o311_ok_error")
   expect_equal(nrow(o311_requests()), 0)
 
-  o311_add_endpoint("invalid", root = "http://echo.jsontest.com/key/value/one/two")
+  o311_add_endpoint("invalid", root = "https://test.org/data.json")
   o311_api("invalid")
-  expect_error(o311_ok(error = TRUE), class = "o311_ok_error")
+  with_mocked_bindings(
+    GET = function(...) data.frame(),
+    expect_error(o311_ok(error = TRUE), class = "o311_ok_error")
+  )
 
   add_test_endpoint()
   o311_api("sd test")
