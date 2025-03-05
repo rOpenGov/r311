@@ -27,7 +27,7 @@ r311_abort <- function(msg,
     msg <- paste(msg, dots, sep = "\n")
   }
 
-  .class <- paste0("r311_", class)
+  class <- paste0("o311_", class)
   abort(msg, class = class, call = call, env = env)
 }
 
