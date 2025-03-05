@@ -57,7 +57,8 @@ validate_endpoints <- function(idx = NULL,
 
     if (isTRUE(deprecated[i])) {
       out <- data.frame(name = name)
-      ok <- reasons <- as.data.frame(rep(list("Deprecated"), length(checks)))
+      ok <- as.data.frame(rep(list(FALSE), length(checks)))
+      reasons <- as.data.frame(rep(list("Deprecated"), length(checks)))
       ok_reasons <- cbind(ok, reasons)
       names(ok_reasons) <- c(checks, paste0("reason_", checks))
       return(cbind(out, ok_reasons))
