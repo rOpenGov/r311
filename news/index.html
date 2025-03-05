@@ -37,7 +37,7 @@
 <ul><li>API list upkeep
 <ul><li>Added: Espoo, Oulu</li>
 <li>Changed: Turku</li>
-<li>Deprecated: Chicago, Ottawa, Siegburg, Northfield, Annaberg-Buchholz</li>
+<li>Deprecated: Ottawa, Siegburg, Northfield, Annaberg-Buchholz</li>
 </ul></li>
 <li>Introduced deprecation system of available APIs
 <ul><li>Added a key “questioned” to the API list which signals that an API might be abandoned</li>
@@ -53,6 +53,8 @@
 <li>Ensure that API error handling always yields a valid condition object</li>
 <li>
 <code>o311_api</code> does not match regular expressions anymore</li>
+<li>
+<code>o311_ok(error = TRUE)</code> now returns an error instead of an error object</li>
 <li>Add an explanatory note if an HTTP error is unknown</li>
 <li>Added a CITATION file (<a href="https://github.com/rOpenGov/r311/issues/3" class="external-link">#3</a>)</li>
 <li>Added a codemeta file</li>
