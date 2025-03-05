@@ -95,33 +95,33 @@ turned out to be negative.</p>
 <span class="r-in"><span><span class="fu">validate_endpoints</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Receiving endpoint 1 out of 3...Receiving endpoint 2 out of 3...Receiving endpoint 3 out of 3...</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3 × 7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   name            discovery services requests reason_discovery  reason_services</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Bloomington, IN FALSE     TRUE     TRUE     API not reachable <span style="color: #BB0000;">NA</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Bonn, DE        FALSE     TRUE     TRUE     API not reachable <span style="color: #BB0000;">NA</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Boston, MA      TRUE      TRUE     TRUE     <span style="color: #BB0000;">NA</span>                <span style="color: #BB0000;">NA</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 1 more variable: reason_requests &lt;lgl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   name              discovery services requests reason_discovery reason_services</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Annaberg-Buchhol… Deprecat… Depreca… Depreca… Deprecated       Deprecated     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Bloomington, IN   FALSE     TRUE     TRUE     API not reachab… <span style="color: #BB0000;">NA</span>             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Bonn, DE          FALSE     TRUE     TRUE     API not reachab… <span style="color: #BB0000;">NA</span>             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 1 more variable: reason_requests &lt;chr&gt;</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># check only requests</span></span></span>
 <span class="r-in"><span><span class="fu">validate_endpoints</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, checks <span class="op">=</span> <span class="st">"requests"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Receiving endpoint 1 out of 3...Receiving endpoint 2 out of 3...Receiving endpoint 3 out of 3...</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3 × 3</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   name            requests reason_requests</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Bloomington, IN TRUE     <span style="color: #BB0000;">NA</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Bonn, DE        TRUE     <span style="color: #BB0000;">NA</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Boston, MA      TRUE     <span style="color: #BB0000;">NA</span>             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   name                  requests   reason_requests</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Annaberg-Buchholz, DE Deprecated Deprecated     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Bloomington, IN       TRUE       <span style="color: #BB0000;">NA</span>             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Bonn, DE              TRUE       <span style="color: #BB0000;">NA</span>             </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># check only whether an endpoint is down</span></span></span>
 <span class="r-in"><span><span class="fu">validate_endpoints</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span>, methods <span class="op">=</span> <span class="st">"down"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Receiving endpoint 1 out of 3...Receiving endpoint 2 out of 3...Receiving endpoint 3 out of 3...</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3 × 7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   name            discovery services requests reason_discovery reason_services</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Bloomington, IN TRUE      TRUE     TRUE     <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Bonn, DE        TRUE      TRUE     TRUE     <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Boston, MA      TRUE      TRUE     TRUE     <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 1 more variable: reason_requests &lt;lgl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   name              discovery services requests reason_discovery reason_services</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Annaberg-Buchhol… Deprecat… Depreca… Depreca… Deprecated       Deprecated     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Bloomington, IN   TRUE      TRUE     TRUE     <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Bonn, DE          TRUE      TRUE     TRUE     <span style="color: #BB0000;">NA</span>               <span style="color: #BB0000;">NA</span>             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 1 more variable: reason_requests &lt;chr&gt;</span></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
