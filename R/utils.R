@@ -37,7 +37,14 @@ abort <- function(msg, class = NULL, call = sys.call(1), env = parent.frame()) {
     call <- NULL
   }
 
-  cnd <- errorCondition(msg, call = call, class = class)
+  if (is_error(msg)) {
+    cnd <- msg
+    call <- cnd$call
+    msg <- cnd$message
+  } else {
+    cnd <- errorCondition(msg, call = call, class = class)
+  }
+
   signalCondition(cnd)
 
   if (is.null(call)) {
@@ -51,6 +58,11 @@ abort <- function(msg, class = NULL, call = sys.call(1), env = parent.frame()) {
   on.exit(options(old_opts))
   msg <- NULL
   stop(msg)
+}
+
+
+is_error <- function(x) {
+  inherits(x, c("error", "condition"))
 }
 
 
