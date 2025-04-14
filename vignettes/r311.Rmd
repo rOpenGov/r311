@@ -61,16 +61,16 @@ o311_endpoints()
 #> # A tibble: 69 × 12
 #>    name            root  docs  jurisdiction key   pagination limit json  dialect deprecated deprecated_reason deprecated_url
 #>    <chr>           <chr> <chr> <chr>        <lgl> <lgl>      <int> <lgl> <chr>   <lgl>      <chr>             <chr>         
-#>  1 Annaberg-Buchh… http… http… annberg-buc… FALSE TRUE          50 TRUE  Mark-a… TRUE       switched          https://buerg…
-#>  2 Bloomington, IN http… <NA>  bloomington… FALSE TRUE        1000 TRUE  uReport FALSE      <NA>              <NA>          
-#>  3 Bonn, DE        http… http… bonn.de      FALSE TRUE         100 TRUE  Mark-a… FALSE      <NA>              <NA>          
-#>  4 Boston, MA      http… http… <NA>         FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
-#>  5 Brookline, MA   http… http… brooklinema… FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
-#>  6 Austin, TX      http… http… <NA>         FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
-#>  7 Chicago, IL     311a… 311a… cityofchica… FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
-#>  8 Newport News, … http… http… cityofnewpo… FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
-#>  9 San Diego, CA   http… http… sandiego.gov FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
-#> 10 Köln / Cologne… http… <NA>  stadt-koeln… FALSE TRUE          50 TRUE  Mark-a… FALSE      <NA>              <NA>          
+#>  1 "Annaberg-Buch… http… http… annberg-buc… FALSE TRUE          50 TRUE  Mark-a… TRUE       switched          https://buerg…
+#>  2 "Bloomington, … http… <NA>  bloomington… FALSE TRUE        1000 TRUE  uReport FALSE      <NA>              <NA>          
+#>  3 "Bonn, DE"      http… http… bonn.de      FALSE TRUE         100 TRUE  Mark-a… FALSE      <NA>              <NA>          
+#>  4 "Boston, MA"    http… http… <NA>         FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
+#>  5 "Brookline, MA" http… http… brooklinema… FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
+#>  6 "Austin, TX"    http… http… <NA>         FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
+#>  7 "Chicago, IL"   311a… 311a… cityofchica… FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
+#>  8 "Newport News,… http… http… cityofnewpo… FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
+#>  9 "San Diego, CA" http… http… sandiego.gov FALSE TRUE          50 TRUE  Connec… FALSE      <NA>              <NA>          
+#> 10 "K\u00f6ln / C… http… <NA>  stadt-koeln… FALSE TRUE          50 TRUE  Mark-a… FALSE      <NA>              <NA>          
 #> # ℹ 59 more rows
 ```
 
@@ -138,18 +138,18 @@ services.
 ``` r
 o311_services()
 #> # A tibble: 183 × 8
-#>    service_code service_name                       description metadata type     keywords group            group_id
-#>    <chr>        <chr>                              <lgl>       <lgl>    <chr>    <chr>    <chr>               <int>
-#>  1 127          Ampel behindertengerecht gestalten NA          FALSE    realtime idea     Barrierefreiheit       11
-#>  2 128          Ampelschaltung ändern              NA          FALSE    realtime idea     Barrierefreiheit       11
-#>  3 129          Bordstein absenken                 NA          FALSE    realtime idea     Barrierefreiheit       11
-#>  4 130          Zugang rollstuhlgerecht gestalten  NA          FALSE    realtime idea     Barrierefreiheit       11
-#>  5 131          Ampelschaltung ändern              NA          FALSE    realtime idea     Fahrradverkehr         12
-#>  6 132          Beleuchtung verändern              NA          FALSE    realtime idea     Fahrradverkehr         12
-#>  7 133          Beschilderung/Markierung ändern    NA          FALSE    realtime idea     Fahrradverkehr         12
-#>  8 134          Beschilderung/Markierung einführen NA          FALSE    realtime idea     Fahrradverkehr         12
-#>  9 135          Bordstein absenken                 NA          FALSE    realtime idea     Fahrradverkehr         12
-#> 10 136          Fahrradständer aufstellen          NA          FALSE    realtime idea     Fahrradverkehr         12
+#>    service_code service_name                              description metadata type     keywords group            group_id
+#>    <chr>        <chr>                                     <lgl>       <lgl>    <chr>    <chr>    <chr>               <int>
+#>  1 127          "Ampel behindertengerecht gestalten"      NA          FALSE    realtime idea     Barrierefreiheit       11
+#>  2 128          "Ampelschaltung \u00e4ndern"              NA          FALSE    realtime idea     Barrierefreiheit       11
+#>  3 129          "Bordstein absenken"                      NA          FALSE    realtime idea     Barrierefreiheit       11
+#>  4 130          "Zugang rollstuhlgerecht gestalten"       NA          FALSE    realtime idea     Barrierefreiheit       11
+#>  5 131          "Ampelschaltung \u00e4ndern"              NA          FALSE    realtime idea     Fahrradverkehr         12
+#>  6 132          "Beleuchtung ver\u00e4ndern"              NA          FALSE    realtime idea     Fahrradverkehr         12
+#>  7 133          "Beschilderung/Markierung \u00e4ndern"    NA          FALSE    realtime idea     Fahrradverkehr         12
+#>  8 134          "Beschilderung/Markierung einf\u00fchren" NA          FALSE    realtime idea     Fahrradverkehr         12
+#>  9 135          "Bordstein absenken"                      NA          FALSE    realtime idea     Fahrradverkehr         12
+#> 10 136          "Fahrradst\u00e4nder aufstellen"          NA          FALSE    realtime idea     Fahrradverkehr         12
 #> # ℹ 173 more rows
 ```
 
@@ -169,16 +169,16 @@ o311_requests()
 #> # A tibble: 52 × 16
 #>    service_request_id status_notes            status service_code service_name description agency_responsible service_notice
 #>                 <int> <chr>                   <chr>         <int> <chr>        <chr>       <chr>              <lgl>         
-#>  1                263 <NA>                    recei…           30 Sperrmüll    redaktione… Abfallwirtschaft … NA            
-#>  2                217 <NA>                    recei…          103 Baum schadh… redaktione… Forstamt           NA            
-#>  3                272 Reparatur beauftragt    in_pr…            4 bauliche Ge… Hier ist ü… LK-LUP-Verkehr     NA            
-#>  4                150 Vielen Dank für Ihren … in_pr…            5 Beleuchtung… Straßenlat… Bauamt             NA            
-#>  5                173 Vorgang wurde zur Bear… in_pr…            3 Ampel schad… Ampel scha… Regional-Administ… NA            
-#>  6                154 Das Anliegen wird im B… in_pr…           13 Hundekot     Die Haltes… Beschwerdemanagem… NA            
-#>  7                210 <NA>                    recei…          117 Wegereinigu… redaktione… Forstamt           NA            
-#>  8                201 <NA>                    recei…          162 Schutzhütte… redaktione… Forstamt           NA            
-#>  9                166 Verstanden.             in_pr…            3 Ampel schad… redaktione… Bauamt (Amt Rosto… NA            
-#> 10                245 Vielen Dank für den Hi… in_pr…            8 Beschilderu… Zusatzzeic… Parchim - FB 3 Re… NA            
+#>  1                263  <NA>                   recei…           30 "Sperrm\u00… "redaktion… "Abfallwirtschaft… NA            
+#>  2                217  <NA>                   recei…          103 "Baum schad… "redaktion… "Forstamt"         NA            
+#>  3                272 "Reparatur beauftragt"  in_pr…            4 "bauliche G… "Hier ist … "LK-LUP-Verkehr"   NA            
+#>  4                150 "Vielen Dank f\u00fcr … in_pr…            5 "Beleuchtun… "Stra\u00d… "Bauamt"           NA            
+#>  5                173 "Vorgang wurde zur Bea… in_pr…            3 "Ampel scha… "Ampel sch… "Regional-Adminis… NA            
+#>  6                154 "Das Anliegen wird im … in_pr…           13 "Hundekot"   "Die Halte… "Beschwerdemanage… NA            
+#>  7                210  <NA>                   recei…          117 "Wegereinig… "redaktion… "Forstamt"         NA            
+#>  8                201  <NA>                   recei…          162 "Schutzh\u0… "redaktion… "Forstamt"         NA            
+#>  9                166 "Verstanden."           in_pr…            3 "Ampel scha… "redaktion… "Bauamt (Amt Rost… NA            
+#> 10                245 "Vielen Dank f\u00fcr … in_pr…            8 "Beschilder… "Zusatzzei… "Parchim - FB 3 R… NA            
 #> # ℹ 42 more rows
 #> # ℹ 8 more variables: requested_datetime <chr>, updated_datetime <chr>, expected_datetime <lgl>, address <chr>,
 #> #   adress_id <lgl>, media_url <chr>, zipcode <lgl>, geometry <POINT [°]>
@@ -200,12 +200,12 @@ o311_requests(service_code = "3")
 #> # A tibble: 6 × 16
 #>   service_request_id status_notes             status service_code service_name description agency_responsible service_notice
 #>                <int> <chr>                    <chr>         <int> <chr>        <chr>       <chr>              <lgl>         
-#> 1                166 Verstanden.              in_pr…            3 Ampel schad… "redaktion… Bauamt (Amt Rosto… NA            
-#> 2                158 <NA>                     revie…            3 Ampel schad… "Die Ampel… Straßenmeisterei … NA            
-#> 3                251 <NA>                     recei…            3 Ampel schad… "redaktion… LK-LUP-Verkehr     NA            
-#> 4                173 Vorgang wurde zur Bearb… in_pr…            3 Ampel schad… "Ampel sch… Regional-Administ… NA            
-#> 5                250 Vielen Dank für die Mel… in_pr…            3 Ampel schad… "Ampel aus… LK-LUP-Verkehr     NA            
-#> 6                273 <NA>                     recei…            3 Ampel schad… "Die Daten… Standardzuständig… NA            
+#> 1                166 "Verstanden."            in_pr…            3 Ampel schad… "redaktion… "Bauamt (Amt Rost… NA            
+#> 2                158  <NA>                    revie…            3 Ampel schad… "Die Ampel… "Stra\u00dfenmeis… NA            
+#> 3                251  <NA>                    recei…            3 Ampel schad… "redaktion… "LK-LUP-Verkehr"   NA            
+#> 4                173 "Vorgang wurde zur Bear… in_pr…            3 Ampel schad… "Ampel sch… "Regional-Adminis… NA            
+#> 5                250 "Vielen Dank f\u00fcr d… in_pr…            3 Ampel schad… "Ampel aus… "LK-LUP-Verkehr"   NA            
+#> 6                273  <NA>                    recei…            3 Ampel schad… "Die Daten… "Standardzust\u00… NA            
 #> # ℹ 8 more variables: requested_datetime <chr>, updated_datetime <chr>, expected_datetime <lgl>, address <chr>,
 #> #   adress_id <lgl>, media_url <lgl>, zipcode <lgl>, geometry <POINT [°]>
 ```
@@ -224,7 +224,7 @@ o311_request("250")
 #> # A tibble: 1 × 16
 #>   service_request_id status_notes             status service_code service_name description agency_responsible service_notice
 #>                <int> <chr>                    <chr>         <int> <chr>        <chr>       <chr>              <lgl>         
-#> 1                250 Vielen Dank für die Mel… in_pr…            3 Ampel schad… Ampel ausg… LK-LUP-Verkehr     NA            
+#> 1                250 "Vielen Dank f\u00fcr d… in_pr…            3 Ampel schad… Ampel ausg… LK-LUP-Verkehr     NA            
 #> # ℹ 8 more variables: requested_datetime <chr>, updated_datetime <chr>, expected_datetime <lgl>, address <chr>,
 #> #   adress_id <lgl>, media_url <lgl>, zipcode <lgl>, geometry <POINT [°]>
 ```
@@ -247,21 +247,21 @@ o311_request_all(max_pages = 2)
 #> Simple feature collection with 200 features and 11 fields
 #> Geometry type: POINT
 #> Dimension:     XY
-#> Bounding box:  xmin: 6.820434 ymin: 50.85319 xmax: 7.104497 ymax: 51.05203
+#> Bounding box:  xmin: 6.829202 ymin: 50.85319 xmax: 7.104497 ymax: 51.04662
 #> Geodetic CRS:  WGS 84
 #> # A tibble: 200 × 12
 #>    service_request_id title     description address_string service_name requested_datetime updated_datetime status media_url
 #>    <chr>              <chr>     <chr>       <chr>          <chr>        <chr>              <chr>            <chr>  <chr>    
-#>  1 1345-2025          #1345-20… "Die Abspe… 50674 Köln - … Straßenbaus… 2025-01-15T15:39:… 2025-02-15T09:2… closed "https:/…
-#>  2 1348-2025          #1348-20… "Sehr geeh… 51103 Köln - … Defekte Obe… 2025-01-15T15:55:… 2025-01-16T14:0… closed "https:/…
-#>  3 1346-2025          #1346-20… "Hier entl… 50935 Köln - … Defekte Obe… 2025-01-15T15:56:… 2025-01-16T14:0… closed ""       
-#>  4 1347-2025          #1347-20… "Dürenerst… 50935 Köln - … Defekte Obe… 2025-01-15T15:58:… 2025-01-16T14:0… closed ""       
-#>  5 1349-2025          #1349-20… "Vom Obere… 50969 Köln - … Kfz-Ampel d… 2025-01-15T16:24:… 2025-02-15T06:2… closed ""       
-#>  6 1351-2025          #1351-20… "Stolperfa… 50999 Köln - … Defekte Obe… 2025-01-15T16:27:… 2025-01-16T14:0… closed "https:/…
-#>  7 1350-2025          #1350-20… "Laterne h… 50823 Köln - … Leuchtmitte… 2025-01-15T16:28:… 2025-02-15T12:2… closed "https:/…
-#>  8 1352-2025          #1352-20… "Wilder Mü… 51109 Köln - … Wilder Müll  2025-01-15T16:37:… 2025-02-15T12:2… closed "https:/…
-#>  9 1353-2025          #1353-20… "Der Fußwe… 50677 Köln - … Defekte Obe… 2025-01-15T17:17:… 2025-01-16T14:1… closed "https:/…
-#> 10 1354-2025          #1354-20… "Seit Mona… 50823 Köln - … Schrottfahr… 2025-01-15T17:40:… 2025-01-16T11:4… open   ""       
+#>  1 1386-2025          "#1386-2… "Mehrere L… "50769 K\u00f… "Leuchtmitt… 2025-01-16T00:35:… 2025-02-15T12:2… closed "https:/…
+#>  2 1387-2025          "#1387-2… "Butzweile… "50829 K\u00f… "Schrott-Kf… 2025-01-16T06:13:… 2025-01-16T11:4… open   "https:/…
+#>  3 1388-2025          "#1388-2… "Die Stra\… "50997 K\u00f… "Leuchtmitt… 2025-01-16T06:35:… 2025-02-15T12:2… closed ""       
+#>  4 1389-2025          "#1389-2… "Dauerbaus… "50968 K\u00f… "Stra\u00df… 2025-01-16T07:04:… 2025-03-27T12:2… closed ""       
+#>  5 1390-2025          "#1390-2… "Hier ist … "50931 K\u00f… "Defekte Ve… 2025-01-16T07:06:… 2025-02-16T09:2… closed ""       
+#>  6 1391-2025          "#1391-2… "Schlagloc… "50672 K\u00f… "Defekte Ob… 2025-01-16T07:19:… 2025-01-17T07:5… closed ""       
+#>  7 1394-2025          "#1394-2… "M\u00fcll… "51061 K\u00f… "Wilder M\u… 2025-01-16T08:08:… 2025-02-15T12:2… closed "https:/…
+#>  8 1393-2025          "#1393-2… "Seit Mona… "50931 K\u00f… "Schrottfah… 2025-01-16T08:10:… 2025-01-16T11:4… open   "https:/…
+#>  9 1392-2025          "#1392-2… "Schrank"   "50739 K\u00f… "Wilder M\u… 2025-01-16T08:10:… 2025-02-15T12:2… closed "https:/…
+#> 10 1395-2025          "#1395-2…  <NA>       "50733 K\u00f… "Wilder M\u… 2025-01-16T08:21:… 2025-02-15T12:2… closed "https:/…
 #> # ℹ 190 more rows
 #> # ℹ 3 more variables: status_note <chr>, service_code <chr>, geometry <POINT [°]>
 ```
@@ -290,16 +290,16 @@ tickets
 #> # A tibble: 50 × 16
 #>    service_request_id status_notes            status service_code service_name description agency_responsible service_notice
 #>                 <int> <chr>                   <chr>         <int> <chr>        <chr>       <chr>              <lgl>         
-#>  1              48005 <NA>                    recei…           93 Beschilderu… "redaktion… Tiefbauamt (Unter… NA            
-#>  2              42258 <NA>                    revie…           99 Beschilderu… "Oft kommt… Tiefbauamt (Unter… NA            
-#>  3              50762 <NA>                    recei…          113 Beschilderu… "redaktion… Tiefbauamt (Unter… NA            
-#>  4              40539 <NA>                    revie…          112 Beschilderu… "Sehr geeh… Tiefbauamt (Unter… NA            
-#>  5              45486 <NA>                    recei…          113 Beschilderu… "redaktion… Tiefbauamt (Unter… NA            
-#>  6              42022 <NA>                    recei…          112 Beschilderu… "Nach dem … Tiefbauamt (Unter… NA            
-#>  7              46210 <NA>                    recei…           93 Beschilderu… "redaktion… Tiefbauamt (Unter… NA            
-#>  8              50520 <NA>                    recei…          113 Beschilderu… "redaktion… Tiefbauamt (Unter… NA            
-#>  9              40653 Vielen Dank für Ihren … in_pr…           93 Beschilderu… "Wenn ich … Tiefbauamt (Unter… NA            
-#> 10              42112 <NA>                    recei…           99 Beschilderu… "redaktion… Tiefbauamt (Unter… NA            
+#>  1              48005  <NA>                   recei…           93 "Beschilder… "redaktion… "Tiefbauamt (Unte… NA            
+#>  2              42258  <NA>                   revie…           99 "Beschilder… "Oft kommt… "Tiefbauamt (Unte… NA            
+#>  3              50762  <NA>                   recei…          113 "Beschilder… "redaktion… "Tiefbauamt (Unte… NA            
+#>  4              40539  <NA>                   revie…          112 "Beschilder… "Sehr geeh… "Tiefbauamt (Unte… NA            
+#>  5              45486  <NA>                   recei…          113 "Beschilder… "redaktion… "Tiefbauamt (Unte… NA            
+#>  6              42022  <NA>                   recei…          112 "Beschilder… "Nach dem … "Tiefbauamt (Unte… NA            
+#>  7              46210  <NA>                   recei…           93 "Beschilder… "redaktion… "Tiefbauamt (Unte… NA            
+#>  8              50520  <NA>                   recei…          113 "Beschilder… "redaktion… "Tiefbauamt (Unte… NA            
+#>  9              40653 "Vielen Dank f\u00fcr … in_pr…           93 "Beschilder… "Wenn ich … "Tiefbauamt (Unte… NA            
+#> 10              42112  <NA>                   recei…           99 "Beschilder… "redaktion… "Tiefbauamt (Unte… NA            
 #> # ℹ 40 more rows
 #> # ℹ 8 more variables: requested_datetime <chr>, updated_datetime <chr>, expected_datetime <lgl>, address <chr>,
 #> #   adress_id <lgl>, media_url <chr>, zipcode <lgl>, geometry <POINT [°]>
@@ -315,7 +315,7 @@ o311_requests(just_count = TRUE)
 #> # A tibble: 1 × 1
 #>   value
 #>   <int>
-#> 1  3352
+#> 1  3310
 ```
 
 The CitySDK extensions also offers additional URL paths which can be queried
@@ -328,7 +328,7 @@ plot(poly$grenze)
 plot(tickets$geometry, add = TRUE, pch = 16)
 ```
 
-![](figure/map-1.png)
+![](../man/figures//map-1.png)
 
 
 # Cleanup
