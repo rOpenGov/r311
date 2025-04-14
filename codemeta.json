@@ -4,17 +4,17 @@
   "identifier": "r311",
   "description": "Access and handle APIs that use the international 'open311' 'GeoReport v2' standard for civic issue tracking <https://wiki.open311.org/GeoReport_v2/>. Retrieve civic service types and request data. Select and add available 'open311' endpoints and jurisdictions. Implicitly supports custom queries and 'open311' extensions. Requires a minimal number of hard dependencies while still allowing the integration in common R formats ('xml2', 'tibble', 'sf').",
   "name": "r311: Interface to the 'open311' Standard",
-  "relatedLink": ["https://ropengov.github.io/r311/", "https://CRAN.R-project.org/package=r311"],
+  "relatedLink": "https://ropengov.github.io/r311/",
   "codeRepository": "https://github.com/rOpenGov/r311",
   "issueTracker": "https://github.com/rOpenGov/r311/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.4.0",
+  "version": "0.4.3",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.3.3 (2024-02-29 ucrt)",
+  "runtimePlatform": "R version 4.4.3 (2025-02-28 ucrt)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -188,8 +188,8 @@
     "SystemRequirements": null
   },
   "isPartOf": "http://ropengov.org/",
-  "keywords": ["ropengov", "r", "r-package", "rstats"],
-  "fileSize": "166.565KB",
+  "keywords": "ropengov",
+  "fileSize": "190.938KB",
   "citation": [
     {
       "@type": "SoftwareSourceCode",
@@ -207,9 +207,5 @@
       "@id": "https://doi.org/10.32614/CRAN.package.r311",
       "sameAs": "https://doi.org/10.32614/CRAN.package.r311"
     }
-  ],
-  "releaseNotes": "https://github.com/rOpenGov/r311/blob/master/NEWS.md",
-  "readme": "https://github.com/rOpenGov/r311/blob/main/README.md",
-  "contIntegration": ["https://github.com/rOpenGov/r311/actions/workflows/R-CMD-check.yaml", "https://app.codecov.io/gh/rOpenGov/r311?branch=main"],
-  "developmentStatus": "https://www.repostatus.org/#active"
+  ]
 }
