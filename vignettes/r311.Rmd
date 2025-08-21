@@ -73,7 +73,7 @@ new endpoints to `o311_endpoints` using `o311_add_endpoint`. You need to
 provide a name (for lookup) and a root URL (the URL used to send requests).
 The following code adds the open311 test server of Rostock, Germany.
 
-```{r}
+```{r eval=FALSE}
 o311_add_endpoint(
   name = "Rostock Test",
   root = "https://demo.klarschiff-hro.de/backoffice/citysdk/",
@@ -94,7 +94,7 @@ attaches it to the active session. Query functions automatically detect the
 attached API.
 
 ```{r}
-o311_api("Rostock Test")
+o311_api("Rostock, DE")
 ```
 
 After attaching an API, `o311_ok` confirms that the selected endpoint is able
