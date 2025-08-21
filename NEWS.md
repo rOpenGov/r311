@@ -1,8 +1,8 @@
-# r311 0.4.2
+# r311 0.4.3
 
 * API list upkeep
-  * Added: Espoo, Oulu
-  * Changed: Turku
+  * Added: Espoo, Oulu (#2)
+  * Changed: Turku (#2)
   * Deprecated: Ottawa, Siegburg, Northfield, Annaberg-Buchholz
 * Introduced deprecation system of available APIs
   * Added a key "questioned" to the API list which signals that an API might be abandoned
@@ -18,6 +18,7 @@
 * Add an explanatory note if an HTTP error is unknown
 * Added a CITATION file (#3)
 * Added a codemeta file
+* Add precomputed vignettes
 
 
 # r311 0.3.7
