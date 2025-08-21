@@ -17,14 +17,16 @@
 #' o311_api("Bonn")
 #' o311_ok()
 #'
-#' # check if Helsinki API is reachable - fails
+#' o311_api("Helsinki, FI")
+#' o311_ok()
+#'
+#' # check if Savonlinna API is reachable - should fail
 #' o311_add_endpoint(
-#'   name = "Helsinki",
-#'   root = "asiointi.hel.fi/palautews/rest/v1/"
+#'   name = "Savonlinna, FI",
+#'   root = "https://savonlinna.asiointi.fi/eFeedback/api/georeport/v2"
 #' )
 #'
-#' o311_api("Helsinki")
-#' o311_ok()
+#' o311_api("Savonlinna, FI")
 #'
 #' # return error message
 #' try(o311_ok(error = TRUE))
