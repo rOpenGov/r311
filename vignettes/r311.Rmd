@@ -56,7 +56,8 @@ that defines a number of open311 implementations that are defined for use in
 the package. The list can be read using `o311_endpoints`.
 
 
-``` r
+```{r}
+library(r311)
 o311_endpoints()
 #> # A tibble: 69 × 12
 #>    name            root  docs  jurisdiction key   pagination limit json  dialect deprecated deprecated_reason deprecated_url
@@ -95,7 +96,7 @@ Retrieving the endpoints list again confirms that you successfully added a
 new row to the endpoints dataframe.
 
 
-``` r
+```{r}
 nrow(o311_endpoints())
 #> [1] 70
 ```
@@ -113,7 +114,7 @@ After attaching an API, `o311_ok` confirms that the selected endpoint is able
 to handle request queries.
 
 
-``` r
+```{r}
 o311_ok()
 #> [1] TRUE
 ```
@@ -134,7 +135,7 @@ use `o311_services`, which returns a list of Rostock's administrative
 services.
 
 
-``` r
+```{r}
 o311_services()
 #> # A tibble: 183 × 8
 #>    service_code service_name                              description metadata type     keywords group            group_id
@@ -158,7 +159,7 @@ o311_services()
 To get data about civic issues in the city area, run `o311_requests`.
 
 
-``` r
+```{r}
 o311_requests()
 #> Simple feature collection with 52 features and 15 fields
 #> Geometry type: POINT
@@ -189,7 +190,7 @@ by all endpoints. Using the `service_code` parameter with one of the previously
 returned service codes, only complaints about broken traffic lights are returned.
 
 
-``` r
+```{r}
 o311_requests(service_code = "3")
 #> Simple feature collection with 6 features and 15 fields
 #> Geometry type: POINT
@@ -213,7 +214,7 @@ Similarly, using a `service_request_id` from the output, you can retrieve a
 single service request from the API.
 
 
-``` r
+```{r}
 o311_request("250")
 #> Simple feature collection with 1 feature and 15 fields
 #> Geometry type: POINT
@@ -240,7 +241,7 @@ retrieves data from the first two pages, resulting in a tibble with 200
 service requests.
 
 
-``` r
+```{r}
 o311_api("Cologne")
 o311_request_all(max_pages = 2)
 #> Simple feature collection with 200 features and 11 fields
@@ -277,7 +278,7 @@ usually be found in the respective documentation (e.g. on GitHub for
 The following query returns the last 50 requests tagged with the "idea" keyword.
 
 
-``` r
+```{r}
 o311_api("Rostock, DE")
 tickets <- o311_requests(keyword = "idea", max_requests = 50)
 tickets
@@ -309,7 +310,7 @@ example, we query just the count of total requests using the `just_count`
 parameter. The result is a 1×1 tibble containing a count value.
 
 
-``` r
+```{r}
 o311_requests(just_count = TRUE)
 #> # A tibble: 1 × 1
 #>   value
@@ -321,7 +322,7 @@ The CitySDK extensions also offers additional URL paths which can be queried
 using the generic `o311_query` function.
 
 
-``` r
+```{r}
 poly <- o311_query("areas")
 plot(poly$grenze)
 plot(tickets$geometry, add = TRUE, pch = 16)
@@ -338,7 +339,7 @@ user directory as returned by `tools::R_user_dir("r311")`. To reset the
 database, run
 
 
-``` r
+```{r}
 o311_reset_endpoints()
 ```
 
