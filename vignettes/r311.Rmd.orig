@@ -13,7 +13,6 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 httptest2::start_vignette("../man/figures/r311")
-library(r311)
 ```
 
 
@@ -61,6 +60,12 @@ Efforts have been made to list open311 servers, but most of them are
 incomplete or outdated. `r311` offers an updated and modifiable endpoint list
 that defines a number of open311 implementations that are defined for use in
 the package. The list can be read using `o311_endpoints`.
+
+Load the package:
+
+```{r}
+library(r311)
+```
 
 ```{r}
 o311_endpoints()
