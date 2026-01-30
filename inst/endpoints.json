@@ -190,6 +190,13 @@
     "dialect": "Mark-a-Spot"
   },
   {
+    "name": "Helsinki, FI",
+    "root": "https://palautteet.hel.fi/public-api/open311-public-service/v1/",
+    "key": false,
+    "pagination": false,
+    "json": true
+  },
+  {
     "name": "Turku, FI",
     "root": "https://opaskartta.turku.fi/efeedback/api/georeport/6aika/",
     "key": false,
