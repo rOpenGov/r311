@@ -43,7 +43,7 @@ to return a complete dataset of service requests."><meta property="og:image" con
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Get civic service request data</h1>
-      <small class="dont-index">Source: <a href="https://github.com/rOpenGov/r311/blob/main/R/requests.R" class="external-link"><code>R/requests.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/rOpenGov/r311/blob/v0.4.4/R/requests.R" class="external-link"><code>R/requests.R</code></a></small>
       <div class="d-none name"><code>o311_requests.Rd</code></div>
     </div>
 
@@ -201,22 +201,22 @@ notice. Refer to the endpoint docs to learn more about custom parameters
 <span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 8.47187 ymin: 47.3324 xmax: 8.600715 ymax: 47.43103</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,000 × 14</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    updated_datetime      service_name media_url detail service_request_id status</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 2026-01-30T19:07:04+… Grünflächen… https://… Ein A…              <span style="text-decoration: underline;">78</span>150 open  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 2026-01-30T19:02:04+… Strasse/Tro… https://… Wasse…              <span style="text-decoration: underline;">78</span>149 open  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 2026-01-30T16:13:29+… VBZ/ÖV       https://… Kurs …              <span style="text-decoration: underline;">78</span>147 closed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 2026-01-30T14:58:48+… Abfall/Samm… https://… Hier …              <span style="text-decoration: underline;">78</span>145 closed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 2026-01-30T11:05:13+… Abfall/Samm… https://… Defek…              <span style="text-decoration: underline;">78</span>144 closed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 2026-01-30T11:07:04+… Abfall/Samm… https://… Liegt…              <span style="text-decoration: underline;">78</span>143 closed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 2026-01-30T10:36:21+… Abfall/Samm… https://… Abfall              <span style="text-decoration: underline;">78</span>142 closed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 2026-01-30T18:08:02+… Strasse/Tro… https://… Der r…              <span style="text-decoration: underline;">78</span>140 closed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 2026-01-30T15:14:29+… Grünflächen… https://… Neu g…              <span style="text-decoration: underline;">78</span>139 closed</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 2026-01-30T10:37:05+… Allgemein    https://… Diver…              <span style="text-decoration: underline;">78</span>138 closed</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    requested_datetime  status service_name title interface_used detail media_url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 2026-01-30T17:13:2… open   Grünflächen… Ast … iOS            Ein A… https://…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 2026-01-30T16:58:0… open   Strasse/Tro… Wass… Android        Wasse… https://…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 2026-01-30T15:27:3… closed VBZ/ÖV       Kurs… Android        Kurs … https://…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 2026-01-30T11:25:1… closed Abfall/Samm… Hier… mobile         Hier … https://…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 2026-01-30T10:46:2… closed Abfall/Samm… Defe… iOS            Defek… https://…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 2026-01-30T10:41:5… closed Abfall/Samm… Lieg… iOS            Liegt… https://…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 2026-01-30T10:19:1… closed Abfall/Samm… Abfa… iOS            Abfall https://…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 2026-01-30T13:19:4… closed Strasse/Tro… Dole… desktop        Der r… https://…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 2026-01-30T13:09:5… closed Grünflächen… Neu … mobile         Neu g… https://…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 2026-01-30T09:32:2… closed Allgemein    Dive… mobile         Diver… https://…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 990 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 8 more variables: interface_used &lt;chr&gt;, agency_sent_datetime &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   service_notice &lt;chr&gt;, service_code &lt;chr&gt;, title &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   requested_datetime &lt;chr&gt;, description &lt;chr&gt;, geometry &lt;POINT [°]&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 7 more variables: updated_datetime &lt;chr&gt;, service_notice &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   description &lt;chr&gt;, agency_sent_datetime &lt;chr&gt;, service_request_id &lt;int&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   service_code &lt;chr&gt;, geometry &lt;POINT [°]&gt;</span></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

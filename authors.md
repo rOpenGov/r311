@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/rOpenGov/r311/blob/main/inst/CITATION)
+[`inst/CITATION`](https://github.com/rOpenGov/r311/blob/v0.4.4/inst/CITATION)
 
 Lieth J (2026). *r311: Interface to the open311 Standard*.
 [doi:10.32614/CRAN.package.r311](https://doi.org/10.32614/CRAN.package.r311),

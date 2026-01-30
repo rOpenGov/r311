@@ -163,21 +163,21 @@ if (o311_ok()) {
 #> Bounding box:  xmin: 8.47187 ymin: 47.3324 xmax: 8.600715 ymax: 47.43103
 #> Geodetic CRS:  WGS 84
 #> # A tibble: 1,000 × 14
-#>    updated_datetime      service_name media_url detail service_request_id status
-#>    <chr>                 <chr>        <chr>     <chr>               <int> <chr> 
-#>  1 2026-01-30T19:07:04+… Grünflächen… https://… Ein A…              78150 open  
-#>  2 2026-01-30T19:02:04+… Strasse/Tro… https://… Wasse…              78149 open  
-#>  3 2026-01-30T16:13:29+… VBZ/ÖV       https://… Kurs …              78147 closed
-#>  4 2026-01-30T14:58:48+… Abfall/Samm… https://… Hier …              78145 closed
-#>  5 2026-01-30T11:05:13+… Abfall/Samm… https://… Defek…              78144 closed
-#>  6 2026-01-30T11:07:04+… Abfall/Samm… https://… Liegt…              78143 closed
-#>  7 2026-01-30T10:36:21+… Abfall/Samm… https://… Abfall              78142 closed
-#>  8 2026-01-30T18:08:02+… Strasse/Tro… https://… Der r…              78140 closed
-#>  9 2026-01-30T15:14:29+… Grünflächen… https://… Neu g…              78139 closed
-#> 10 2026-01-30T10:37:05+… Allgemein    https://… Diver…              78138 closed
+#>    requested_datetime  status service_name title interface_used detail media_url
+#>    <chr>               <chr>  <chr>        <chr> <chr>          <chr>  <chr>    
+#>  1 2026-01-30T17:13:2… open   Grünflächen… Ast … iOS            Ein A… https://…
+#>  2 2026-01-30T16:58:0… open   Strasse/Tro… Wass… Android        Wasse… https://…
+#>  3 2026-01-30T15:27:3… closed VBZ/ÖV       Kurs… Android        Kurs … https://…
+#>  4 2026-01-30T11:25:1… closed Abfall/Samm… Hier… mobile         Hier … https://…
+#>  5 2026-01-30T10:46:2… closed Abfall/Samm… Defe… iOS            Defek… https://…
+#>  6 2026-01-30T10:41:5… closed Abfall/Samm… Lieg… iOS            Liegt… https://…
+#>  7 2026-01-30T10:19:1… closed Abfall/Samm… Abfa… iOS            Abfall https://…
+#>  8 2026-01-30T13:19:4… closed Strasse/Tro… Dole… desktop        Der r… https://…
+#>  9 2026-01-30T13:09:5… closed Grünflächen… Neu … mobile         Neu g… https://…
+#> 10 2026-01-30T09:32:2… closed Allgemein    Dive… mobile         Diver… https://…
 #> # ℹ 990 more rows
-#> # ℹ 8 more variables: interface_used <chr>, agency_sent_datetime <chr>,
-#> #   service_notice <chr>, service_code <chr>, title <chr>,
-#> #   requested_datetime <chr>, description <chr>, geometry <POINT [°]>
+#> # ℹ 7 more variables: updated_datetime <chr>, service_notice <chr>,
+#> #   description <chr>, agency_sent_datetime <chr>, service_request_id <int>,
+#> #   service_code <chr>, geometry <POINT [°]>
 # }
 ```

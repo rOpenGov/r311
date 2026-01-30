@@ -177,11 +177,9 @@ footer .pkgdown-footer-left {
 	display: inline-block;
 }
 
-/* Hack to reduce color in dark mode */
+/* Hack to reduce light in dark mode */
 [data-bs-theme="dark"] img.r-plt,
-[data-bs-theme="dark"] pre .r-plt.img img,
-[data-bs-theme="dark"] .cell-output-display img,
-[data-bs-theme="dark"] .html-widget {
+[data-bs-theme="dark"] pre .r-plt.img img {
 	filter: grayscale(33%) !important;
 }
 
@@ -327,9 +325,6 @@ pre {
 /* Dark reactable */
 
 [data-bs-theme="dark"] {
-	.reactable.html-widget {
-		filter: none !important;
-	}
 
 	.Reactable {
 		background-color: var(--bs-body-bg);
