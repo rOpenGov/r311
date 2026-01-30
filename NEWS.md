@@ -1,3 +1,9 @@
+# r311 0.4.4
+
+* API list upkeep
+  * Added Helsinki
+
+
 # r311 0.4.3
 
 * API list upkeep
