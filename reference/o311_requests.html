@@ -15,7 +15,7 @@ to return a complete dataset of service requests."><meta property="og:image" con
 
     <a class="navbar-brand me-2" href="../index.html">r311</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.4.4</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -201,22 +201,22 @@ notice. Refer to the endpoint docs to learn more about custom parameters
 <span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 8.47187 ymin: 47.3324 xmax: 8.600715 ymax: 47.43103</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,000 × 14</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    service_notice    agency_sent_datetime service_request_id service_code detail</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                             <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> <span style="color: #949494;">"</span>Grüezi \r\nViel… 2026-01-30T15:32:04…              <span style="text-decoration: underline;">78</span>147 VBZ/ÖV       <span style="color: #949494;">"</span>Kurs…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> <span style="color: #949494;">"</span>Entsorgung + Re… 2026-01-30T11:27:04…              <span style="text-decoration: underline;">78</span>145 Abfall/Samm… <span style="color: #949494;">"</span>Hier…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> <span style="color: #949494;">"</span>Entsorgung + Re… 2026-01-30T10:47:04…              <span style="text-decoration: underline;">78</span>144 Abfall/Samm… <span style="color: #949494;">"</span>Defe…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> <span style="color: #949494;">"</span>Entsorgung + Re… 2026-01-30T11:07:04…              <span style="text-decoration: underline;">78</span>143 Abfall/Samm… <span style="color: #949494;">"</span>Lieg…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> <span style="color: #949494;">"</span>Entsorgung + Re… 2026-01-30T10:22:05…              <span style="text-decoration: underline;">78</span>142 Abfall/Samm… <span style="color: #949494;">"</span>Abfa…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> <span style="color: #949494;">"</span>Der Deckel gehö… 2026-01-30T10:37:05…              <span style="text-decoration: underline;">78</span>140 Strasse/Tro… <span style="color: #949494;">"</span>Der …</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> <span style="color: #949494;">"</span>Guten Tag \r\n\… 2026-01-30T10:27:05…              <span style="text-decoration: underline;">78</span>139 Grünflächen… <span style="color: #949494;">"</span>Neu …</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> <span style="color: #949494;">"</span>Vielen Dank für… 2026-01-30T10:37:05…              <span style="text-decoration: underline;">78</span>138 Allgemein    <span style="color: #949494;">"</span>Dive…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> <span style="color: #949494;">"</span>Entsorgung + Re… 2026-01-30T08:57:04…              <span style="text-decoration: underline;">78</span>137 Abfall/Samm… <span style="color: #949494;">"</span>Gute…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> <span style="color: #949494;">"</span>Entsorgung + Re… 2026-01-30T15:17:05…              <span style="text-decoration: underline;">78</span>136 Abfall/Samm… <span style="color: #949494;">"</span>Imme…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    service_notice interface_used updated_datetime service_request_id description</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span>  <span style="color: #BB0000;">NA</span>            iOS            2026-01-30T19:0…              <span style="text-decoration: underline;">78</span>150 Ast ragt a…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>  <span style="color: #BB0000;">NA</span>            Android        2026-01-30T19:0…              <span style="text-decoration: underline;">78</span>149 Wasser tro…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> <span style="color: #949494;">"</span>Grüezi \r\nV… Android        2026-01-30T16:1…              <span style="text-decoration: underline;">78</span>147 Kurs 18 Ge…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> <span style="color: #949494;">"</span>Entsorgung +… mobile         2026-01-30T14:5…              <span style="text-decoration: underline;">78</span>145 Hier steht…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> <span style="color: #949494;">"</span>Entsorgung +… iOS            2026-01-30T11:0…              <span style="text-decoration: underline;">78</span>144 Defekter T…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> <span style="color: #949494;">"</span>Entsorgung +… iOS            2026-01-30T11:0…              <span style="text-decoration: underline;">78</span>143 Liegt bere…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> <span style="color: #949494;">"</span>Entsorgung +… iOS            2026-01-30T10:3…              <span style="text-decoration: underline;">78</span>142 Abfall: Ab…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> <span style="color: #949494;">"</span>Der Deckel g… desktop        2026-01-30T18:0…              <span style="text-decoration: underline;">78</span>140 Dolendecke…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> <span style="color: #949494;">"</span>Guten Tag \r… mobile         2026-01-30T15:1…              <span style="text-decoration: underline;">78</span>139 Neu gepfla…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> <span style="color: #949494;">"</span>Vielen Dank … mobile         2026-01-30T10:3…              <span style="text-decoration: underline;">78</span>138 Diverse E-…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 990 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 9 more variables: interface_used &lt;chr&gt;, status &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   requested_datetime &lt;chr&gt;, media_url &lt;chr&gt;, service_name &lt;chr&gt;, title &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   updated_datetime &lt;chr&gt;, description &lt;chr&gt;, geometry &lt;POINT [°]&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 9 more variables: title &lt;chr&gt;, status &lt;chr&gt;, detail &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   agency_sent_datetime &lt;chr&gt;, service_name &lt;chr&gt;, service_code &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   media_url &lt;chr&gt;, requested_datetime &lt;chr&gt;, geometry &lt;POINT [°]&gt;</span></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

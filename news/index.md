@@ -1,5 +1,10 @@
 # Changelog
 
+## r311 0.4.4
+
+- API list upkeep
+  - Added Helsinki
+
 ## r311 0.4.3
 
 CRAN release: 2025-04-14
