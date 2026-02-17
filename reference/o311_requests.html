@@ -43,7 +43,7 @@ to return a complete dataset of service requests."><meta property="og:image" con
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Get civic service request data</h1>
-      <small class="dont-index">Source: <a href="https://github.com/rOpenGov/r311/blob/v0.4.4/R/requests.R" class="external-link"><code>R/requests.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/rOpenGov/r311/blob/main/R/requests.R" class="external-link"><code>R/requests.R</code></a></small>
       <div class="d-none name"><code>o311_requests.Rd</code></div>
     </div>
 
@@ -198,25 +198,25 @@ notice. Refer to the endpoint docs to learn more about custom parameters
 <span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 1000 features and 13 fields</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: POINT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 8.47187 ymin: 47.3324 xmax: 8.600715 ymax: 47.43103</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 8.47187 ymin: 47.32977 xmax: 8.601215 ymax: 47.42939</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,000 × 14</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    requested_datetime  status service_name title interface_used detail media_url</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 2026-01-30T17:13:2… open   Grünflächen… Ast … iOS            Ein A… https://…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 2026-01-30T16:58:0… open   Strasse/Tro… Wass… Android        Wasse… https://…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 2026-01-30T15:27:3… closed VBZ/ÖV       Kurs… Android        Kurs … https://…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 2026-01-30T11:25:1… closed Abfall/Samm… Hier… mobile         Hier … https://…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 2026-01-30T10:46:2… closed Abfall/Samm… Defe… iOS            Defek… https://…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 2026-01-30T10:41:5… closed Abfall/Samm… Lieg… iOS            Liegt… https://…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 2026-01-30T10:19:1… closed Abfall/Samm… Abfa… iOS            Abfall https://…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 2026-01-30T13:19:4… closed Strasse/Tro… Dole… desktop        Der r… https://…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 2026-01-30T13:09:5… closed Grünflächen… Neu … mobile         Neu g… https://…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 2026-01-30T09:32:2… closed Allgemein    Dive… mobile         Diver… https://…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    service_name   detail service_request_id title requested_datetime description</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> VBZ/ÖV         <span style="color: #949494;">"</span>Zwei…              <span style="text-decoration: underline;">78</span>724 Zwei… 2026-02-17T17:13:… <span style="color: #949494;">"</span>Zwei Sche…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> Strasse/Trott… <span style="color: #949494;">"</span>Lift…              <span style="text-decoration: underline;">78</span>723 Lift… 2026-02-17T17:53:… <span style="color: #949494;">"</span>Lift funk…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> Abfall/Sammel… <span style="color: #949494;">"</span>Matr…              <span style="text-decoration: underline;">78</span>720 Matr… 2026-02-17T16:06:… <span style="color: #949494;">"</span>Matratze …</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> Abfall/Sammel… <span style="color: #949494;">"</span>Kart…              <span style="text-decoration: underline;">78</span>713 Kart… 2026-02-17T11:58:… <span style="color: #949494;">"</span>Kartonabh…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> Abfall/Sammel… <span style="color: #949494;">"</span>Ille…              <span style="text-decoration: underline;">78</span>712 Ille… 2026-02-17T16:12:… <span style="color: #949494;">"</span>Illegale …</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> Signalisation… <span style="color: #949494;">"</span>Sign…              <span style="text-decoration: underline;">78</span>711 Sign… 2026-02-17T10:32:… <span style="color: #949494;">"</span>Signalisa…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> Grünflächen/S… <span style="color: #949494;">"</span>Tote…              <span style="text-decoration: underline;">78</span>707 Tote… 2026-02-17T17:44:… <span style="color: #949494;">"</span>Toter Vog…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Signalisation… <span style="color: #949494;">"</span>Die …              <span style="text-decoration: underline;">78</span>705 Die … 2026-02-17T06:32:… <span style="color: #949494;">"</span>Die Signa…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> Beleuchtung/U… <span style="color: #949494;">"</span>Lamp…              <span style="text-decoration: underline;">78</span>704 Lamp… 2026-02-16T22:57:… <span style="color: #949494;">"</span>Lampe leu…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> Abfall/Sammel… <span style="color: #949494;">"</span>Bitt…              <span style="text-decoration: underline;">78</span>703 Bitt… 2026-02-17T20:30:… <span style="color: #949494;">"</span>Bitte jew…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 990 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 7 more variables: updated_datetime &lt;chr&gt;, service_notice &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   description &lt;chr&gt;, agency_sent_datetime &lt;chr&gt;, service_request_id &lt;int&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   service_code &lt;chr&gt;, geometry &lt;POINT [°]&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 8 more variables: service_notice &lt;chr&gt;, media_url &lt;chr&gt;, status &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   service_code &lt;chr&gt;, updated_datetime &lt;chr&gt;, interface_used &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   agency_sent_datetime &lt;chr&gt;, geometry &lt;POINT [°]&gt;</span></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

@@ -42,9 +42,9 @@ if (o311_ok()) {
   o311_service(services$service_code[1])
 }
 #> # A tibble: 1 × 2
-#>   service_code          attributes$variable $code     $datatype $required $order
-#>   <chr>                 <lgl>               <chr>     <chr>     <lgl>      <int>
-#> 1 input:Street Cleaning TRUE                input.St… singleva… TRUE           1
+#>   service_code        attributes$variable $code       $datatype $required $order
+#>   <chr>               <lgl>               <chr>       <chr>     <lgl>      <int>
+#> 1 RPD:General:General TRUE                oform.rpd_… singleva… TRUE           1
 #> # ℹ 2 more variables: attributes$description <chr>, $values <list>
 # }
 ```

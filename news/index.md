@@ -2,6 +2,8 @@
 
 ## r311 0.4.4
 
+CRAN release: 2026-01-30
+
 - API list upkeep
   - Added Helsinki
 
