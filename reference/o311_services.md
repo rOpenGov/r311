@@ -41,10 +41,12 @@ if (o311_ok()) {
   # inspect a service code
   o311_service(services$service_code[1])
 }
-#> # A tibble: 1 × 2
-#>   service_code        attributes$variable $code       $datatype $required $order
-#>   <chr>               <lgl>               <chr>       <chr>     <lgl>      <int>
-#> 1 RPD:General:General TRUE                oform.rpd_… singleva… TRUE           1
-#> # ℹ 2 more variables: attributes$description <chr>, $values <list>
+#> # A tibble: 2 × 2
+#>   service_code                            attributes$variable $code    $datatype
+#>   <chr>                                   <lgl>               <chr>    <chr>    
+#> 1 input:Improper Scooter and Bike Parking TRUE                input.c… singleva…
+#> 2 input:Improper Scooter and Bike Parking TRUE                input.c… singleva…
+#> # ℹ 4 more variables: attributes$required <lgl>, $order <int>,
+#> #   $description <chr>, $values <list>
 # }
 ```
