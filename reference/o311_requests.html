@@ -201,22 +201,23 @@ notice. Refer to the endpoint docs to learn more about custom parameters
 <span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 8.468205 ymin: 47.32461 xmax: 8.602686 ymax: 47.43051</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,000 × 14</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    media_url updated_datetime detail description service_code requested_datetime</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> https://… 2026-02-26T09:0… Mittl… Mittleres … Grünflächen… 2026-02-26T08:39:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> <span style="color: #BB0000;">NA</span>        2026-02-26T08:5… Unbew… Unbewillig… Allgemein    2026-02-26T07:49:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> <span style="color: #BB0000;">NA</span>        2026-02-26T08:5… Der L… Der Lift i… Strasse/Tro… 2026-02-26T07:44:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> <span style="color: #BB0000;">NA</span>        2026-02-26T08:4… Sehr … Sehr geehr… Strasse/Tro… 2026-02-25T20:36:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> <span style="color: #BB0000;">NA</span>        2026-02-26T06:0… Parkb… Parkbank l… Grünflächen… 2026-02-25T19:34:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> https://… 2026-02-26T07:0… Abfal… Abfallents… Abfall/Samm… 2026-02-25T19:29:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> https://… 2026-02-26T08:4… Der G… Gully vers… Strasse/Tro… 2026-02-25T19:21:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> https://… 2026-02-25T16:4… Schaf… Schaffhaus… Signalisati… 2026-02-25T16:28:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> https://… 2026-02-25T16:5… Depon… Deponieren… Abfall/Samm… 2026-02-25T16:13:…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> https://… 2026-02-25T15:1… Die P… Die Putzak… Abfall/Samm… 2026-02-25T15:08:…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    interface_used agency_sent_datetime      description         updated_datetime</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> desktop        2026-02-26T10:22:04+01:00 Matratze wild depo… 2026-02-26T10:2…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> mobile         2026-02-26T10:17:05+01:00 Abfall. „gratis“: … 2026-02-26T10:2…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> Android        2026-02-26T09:07:04+01:00 Mittleres Holz ist… 2026-02-26T09:0…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> iOS            2026-02-26T09:37:04+01:00 Unbewilligte Werbe… 2026-02-26T09:3…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> mobile         2026-02-26T08:52:05+01:00 Der Lift ist defek… 2026-02-26T08:5…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> mobile         2026-02-26T09:47:05+01:00 Sehr geehrte Damen… 2026-02-26T09:4…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> iOS            2026-02-26T06:07:05+01:00 Parkbank lose. Kip… 2026-02-26T06:0…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> mobile         2026-02-25T19:32:04+01:00 Abfallentsorgung a… 2026-02-26T07:0…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> iOS            2026-02-26T08:42:05+01:00 Gully verstopft: D… 2026-02-26T08:4…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> iOS            2026-02-25T16:27:05+01:00 Schaffhauserstrass… 2026-02-25T16:4…</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 990 more rows</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 8 more variables: status &lt;chr&gt;, title &lt;chr&gt;, service_notice &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   interface_used &lt;chr&gt;, service_request_id &lt;int&gt;, service_name &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   agency_sent_datetime &lt;chr&gt;, geometry &lt;POINT [°]&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 10 more variables: service_request_id &lt;int&gt;, detail &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   requested_datetime &lt;chr&gt;, service_code &lt;chr&gt;, service_name &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   service_notice &lt;chr&gt;, status &lt;chr&gt;, title &lt;chr&gt;, media_url &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   geometry &lt;POINT [°]&gt;</span></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
