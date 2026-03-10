@@ -24,6 +24,9 @@ if (o311_ok()) {
 #> $discovery$changeset
 #> [1] "2021-03-01T00:00:00Z"
 #> 
+#> $discovery$max_requests
+#> [1] "1000"
+#> 
 #> $discovery$endpoints
 #> $discovery$endpoints[[1]]
 #> $discovery$endpoints[[1]]$formats
@@ -37,25 +40,22 @@ if (o311_ok()) {
 #> [1] "text/html"
 #> 
 #> 
-#> $discovery$endpoints[[1]]$changeset
-#> [1] "2021-03-01T00:00:00Z"
-#> 
 #> $discovery$endpoints[[1]]$type
 #> [1] "production"
+#> 
+#> $discovery$endpoints[[1]]$url
+#> [1] "https://www.zueriwieneu.ch/open311"
 #> 
 #> $discovery$endpoints[[1]]$specification
 #> [1] "http://wiki.open311.org/GeoReport_v2"
 #> 
-#> $discovery$endpoints[[1]]$url
-#> [1] "https://www.zueriwieneu.ch/open311"
+#> $discovery$endpoints[[1]]$changeset
+#> [1] "2021-03-01T00:00:00Z"
 #> 
 #> 
 #> 
 #> $discovery$contact
 #> [1] "Send email to zurich@fixmystreet.com."
-#> 
-#> $discovery$max_requests
-#> [1] "1000"
 #> 
 #> 
 # }
