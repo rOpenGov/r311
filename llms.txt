@@ -20,6 +20,7 @@ common R frameworks such as the tidyverse, `sf` or `xml2`.
 You can install [r311](https://ropengov.github.io/r311/) from CRAN with:
 
 ``` r
+
 install.packages("r311")
 ```
 
@@ -27,6 +28,7 @@ Or you can install the development version from
 [GitHub](https://github.com/) with:
 
 ``` r
+
 # install.packages("remotes")
 remotes::install_github("rOpenGov/r311")
 ```
@@ -38,6 +40,7 @@ sets up a jurisdiction and retrieves a small amount of data on service
 tickets in Cologne, Germany.
 
 ``` r
+
 library(r311)
 
 o311_api("Cologne")
