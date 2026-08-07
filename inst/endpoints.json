@@ -25,8 +25,8 @@
   },
   {
     "name": "Bonn, DE",
-    "root": "https://anliegen.bonn.de/georeport/v2/",
-    "docs": "https://anliegen.bonn.de/open311",
+    "root": "https://anliegen.bonn.de/ap/georeport/v2/",
+    "docs": "https://anliegen.bonn.de/api/open311",
     "jurisdiction": "bonn.de",
     "key": false,
     "pagination": true,
