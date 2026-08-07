@@ -163,21 +163,21 @@ if (o311_ok()) {
 #> Bounding box:  xmin: 8.468074 ymin: 47.32501 xmax: 8.610379 ymax: 47.42946
 #> Geodetic CRS:  WGS 84
 #> # A tibble: 1,000 × 14
-#>    service_notice                detail media_url requested_datetime description
-#>    <chr>                         <chr>  <chr>     <chr>              <chr>      
-#>  1 "Guten Tag\r\n\r\nVielen Dan… "Tafe… https://… 2026-08-07T15:41:… "Tafel ver…
-#>  2 "Guten Tag\r\n\r\nVielen Dan… "Der … https://… 2026-08-07T14:23:… "Der Brief…
-#>  3 "Guten Tag\r\n\r\nVielen Dan… "Tafe… https://… 2026-08-07T13:26:… "Tafel wur…
-#>  4 "Entsorgung + Recycling Züri… "Grue… https://… 2026-08-07T12:17:… "Gruezi Hi…
-#>  5  NA                           "Bei … NA        2026-08-07T11:28:… "Bei einer…
-#>  6 "Besten Dank für Ihre Meldun… "Die … NA        2026-08-07T11:58:… "Die Parol…
-#>  7 "Entsorgung + Recycling Züri… "Hund… https://… 2026-08-07T11:49:… "Hundekot …
-#>  8 "Entsorgung + Recycling Züri… "Imme… NA        2026-08-07T10:38:… "Immer meh…
-#>  9  NA                           "Der … https://… 2026-08-07T09:09:… "Der Weihe…
-#> 10 "Vielen Dank für Ihre Meldun… "2 E-… https://… 2026-08-07T12:00:… "2 E-Trott…
+#>    interface_used description  updated_datetime detail status service_request_id
+#>    <chr>          <chr>        <chr>            <chr>  <chr>               <int>
+#>  1 iOS            "Tafel verk… 2026-08-07T16:0… "Tafe… closed              85188
+#>  2 mobile         "Der Briefp… 2026-08-07T15:3… "Der … closed              85187
+#>  3 iOS            "Tafel wurd… 2026-08-07T13:0… "Tafe… closed              85185
+#>  4 iOS            "Gruezi Hie… 2026-08-07T11:5… "Grue… closed              85183
+#>  5 desktop        "Bei einer … 2026-08-07T15:3… "Bei … open                85182
+#>  6 desktop        "Die Parole… 2026-08-07T13:4… "Die … closed              85180
+#>  7 iOS            "Hundekot u… 2026-08-07T11:5… "Hund… closed              85179
+#>  8 Android        "Immer mehr… 2026-08-07T10:4… "Imme… closed              85178
+#>  9 mobile         "Der Weiher… 2026-08-07T09:1… "Der … open                85177
+#> 10 iOS            "2 E-Trotti… 2026-08-07T08:0… "2 E-… closed              85176
 #> # ℹ 990 more rows
-#> # ℹ 9 more variables: updated_datetime <chr>, status <chr>, service_name <chr>,
-#> #   agency_sent_datetime <chr>, service_code <chr>, interface_used <chr>,
-#> #   service_request_id <int>, title <chr>, geometry <POINT [°]>
+#> # ℹ 8 more variables: service_notice <chr>, media_url <chr>,
+#> #   service_name <chr>, service_code <chr>, title <chr>,
+#> #   requested_datetime <chr>, agency_sent_datetime <chr>, geometry <POINT [°]>
 # }
 ```
