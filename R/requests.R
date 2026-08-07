@@ -203,7 +203,8 @@ o311_request_all <- function(service_code = NULL,
     i <- i + 1
   }
 
-  rbind_list(out)
+  is_sf <- vapply(out, inherits, "sf", FUN.VALUE = logical(1))
+  rbind_list(out[is_sf])
 }
 
 
@@ -212,7 +213,10 @@ identical_request_ids <- function(x, y) {
     x <- list(x)
   }
   matches <- outer(x, y, Vectorize(function(x, y) {
-    setequal(x$service_request_id, y$service_request_id)
+    setequal(
+      x[["service_request_id"]],
+      y[["service_request_id"]]
+    )
   }))
   any(as.logical(matches))
 }
